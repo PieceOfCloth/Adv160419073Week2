@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="Player's Turn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="+"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txtTurn"
+            app:layout_constraintStart_toStartOf="@+id/txtTurn"
+            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
+
+        <TextView
+            android:id="@+id/txtNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="XX"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/txtNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="XX"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="60dp"
+            android:hint="Your Answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmitAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Submit Answer"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <TextView
+            android:id="@+id/txtResult1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/btnSubmitAnswer"
+            app:layout_constraintStart_toStartOf="@+id/btnSubmitAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/btnSubmitAnswer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
